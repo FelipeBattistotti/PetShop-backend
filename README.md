@@ -10,7 +10,7 @@ This project aims to present a Web Application that will allow the consultation 
 
 <br/>
 
-# Technologies
+# Stack
 
 - [Node.js](https://nodejs.org/en)
 - [React](https://reactjs.org)
