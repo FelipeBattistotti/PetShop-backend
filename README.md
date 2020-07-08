@@ -1,6 +1,6 @@
 
 <p align="center">
-  <!--<img alt="Yoda" src=".github/yoda_icon.png">-->
+  <img alt="Dog" src=".github/dog_icon.png">
 </p>
 
 # Project
@@ -13,40 +13,30 @@ This project aims to present a Web Application that will allow the consultation 
 # Stack
 
 - [Node.js](https://nodejs.org/en)
-- [React](https://reactjs.org)
 
 <br/>
 
 # Backend
+
 Developed with: <strong>Node.js</strong>
 
 <br/>
 
-# Frontend
-Developed with: <strong>React</strong>
-
-<br/>
-
-Snapshots:
-
-<p align="center">
-  <!--
-  <img alt="Snapshot1" src=".github/snapshot1.png">
-  <img alt="Snapshot2" src=".github/snapshot2.png">
-  <img alt="Snapshot3" src=".github/snapshot3.png">
-  -->
-</p>
+Test URL Examples (Heroku):
+<strong>Login:</strong> https://petshop-webapp.herokuapp.com/login
+<strong>GET user:</strong> https://petshop-webapp.herokuapp.com/user
+<strong>GET product:</strong> https://petshop-webapp.herokuapp.com/product?page=1&name=Ração
+<strong>GET product:</strong> https://petshop-webapp.herokuapp.com/product?page=1&category=Alimentos
+<strong>POST product:</strong> https://petshop-webapp.herokuapp.com/product
+<strong>PUT product:</strong> https://petshop-webapp.herokuapp.com/product
+<strong>DELETE product:</strong> https://petshop-webapp.herokuapp.com/1
 
 <br/>
 
 # Videos
-<!--
-- [Medidor de Consumo - Web App Demo](https://youtu.be/ysfJrAA-LAE)
-- [Fluxograma do Projeto](https://youtu.be/lR0X3cR9dAk)
-- [Backend (Node.js) - Parte 1](https://youtu.be/yT_jV0aznuc)
-- [Backend (Node.js) - Parte 2](https://youtu.be/7e_3LmQipsA)
-- [Frontend (React)](https://youtu.be/nTU33jcWwQI)
--->
+
+- [Backend: Pet Shop - Web App (Parte 1)](https://youtu.be/K7iKAAvOhL4)
+- [Backend: Pet Shop - Web App (Parte 2)](https://youtu.be/iY7X5dLG4xE)
 
 <br/>
 
