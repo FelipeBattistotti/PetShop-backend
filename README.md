@@ -23,13 +23,20 @@ Developed with: <strong>Node.js</strong>
 <br/>
 
 Test URL Examples (Heroku):
-<strong>Login:</strong> https://petshop-webapp.herokuapp.com/login
-<strong>GET user:</strong> https://petshop-webapp.herokuapp.com/user
-<strong>GET product:</strong> https://petshop-webapp.herokuapp.com/product?page=1&name=Ração
-<strong>GET product:</strong> https://petshop-webapp.herokuapp.com/product?page=1&category=Alimentos
-<strong>POST product:</strong> https://petshop-webapp.herokuapp.com/product
-<strong>PUT product:</strong> https://petshop-webapp.herokuapp.com/product
-<strong>DELETE product:</strong> https://petshop-webapp.herokuapp.com/1
+<br/>
+<strong>Login</strong> https://petshop-webapp.herokuapp.com/login
+<br/>
+<strong>GET user</strong> https://petshop-webapp.herokuapp.com/user
+<br/>
+<strong>GET product</strong> https://petshop-webapp.herokuapp.com/product?page=1&name=Ração
+<br/>
+<strong>GET product</strong> https://petshop-webapp.herokuapp.com/product?page=1&category=Alimentos
+<br/>
+<strong>POST product</strong> https://petshop-webapp.herokuapp.com/product
+<br/>
+<strong>PUT product</strong> https://petshop-webapp.herokuapp.com/product
+<br/>
+<strong>DELETE product</strong> https://petshop-webapp.herokuapp.com/1
 
 <br/>
 
