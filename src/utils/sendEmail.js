@@ -21,7 +21,7 @@ module.exports = async function sendEmail(email) {
     const mailOptions = {
         from: process.env.MAIL_FROM,
         to: process.env.MAIL_TO,
-        subject: 'Car Rental - Web App',
+        subject: 'Pet Shop - Web App',
         text: 'Foi realizado login. E-mail: ' + email,
     };
 
