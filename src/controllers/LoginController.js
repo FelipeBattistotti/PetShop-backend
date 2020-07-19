@@ -1,5 +1,6 @@
 const connection = require('../database/connection');
 const encryptPWD = require('../utils/encryptPWD');
+const sendEmail = require('../utils/sendEmail');
 
 module.exports = {
     async create(request, response) {
@@ -17,6 +18,8 @@ module.exports = {
             console.log('No User found with this Login!');
             return response.status(400).json({ error: 'No User found with this Login!' });
         }
+
+        sendEmail(email);
 
         console.log('LOGIN user - OK');
 
