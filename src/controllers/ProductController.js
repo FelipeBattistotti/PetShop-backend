@@ -2,19 +2,30 @@ const connection = require('../database/connection');
 
 module.exports = {
     async index(request, response) {
-        const { page = 1, name , description, category } = request.query;
+        const { page, name , description, category } = request.query;
         const user_id = request.headers.authorization;
 
         const [count] = await connection('product').where('product.user_id', user_id).count();
 
-        const product = await connection('product')
-            .where('product.user_id', user_id)
-            .andWhere('product.name', 'like' , `%${name || ''}%`)
-            .andWhere('product.description', 'like' , `%${description || ''}%`)
-            .andWhere('product.category', 'like' , `%${category || ''}%`)
-            .limit(5)
-            .offset((page - 1) * 5)
-            .select('*');
+        let product;
+
+        if (page === undefined) {
+            product = await connection('product')
+                .where('product.user_id', user_id)
+                .andWhere('product.name', 'like' , `%${name || ''}%`)
+                .andWhere('product.description', 'like' , `%${description || ''}%`)
+                .andWhere('product.category', 'like' , `%${category || ''}%`)
+                .select('*');
+        } else {
+            product = await connection('product')
+                .where('product.user_id', user_id)
+                .andWhere('product.name', 'like' , `%${name || ''}%`)
+                .andWhere('product.description', 'like' , `%${description || ''}%`)
+                .andWhere('product.category', 'like' , `%${category || ''}%`)
+                .limit(5)
+                .offset((page - 1) * 5)
+                .select('*');
+        }
 
         response.header('X-Total-Count', count['count(*)']);
 
