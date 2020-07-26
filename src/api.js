@@ -51,6 +51,15 @@ routes.get('/product', celebrate({
 }), ProductController.index);
 
 /**
+ * GET product by ID
+ */
+routes.get('/product/:id', celebrate({
+    [Segments.PARAMS]: Joi.object().keys({
+        id: Joi.number().required(),
+    })
+}), ProductController.indexByID);
+
+/**
  * POST product
  */
 routes.post('/product', celebrate({
@@ -72,8 +81,8 @@ routes.put('/product', celebrate({
         name: Joi.string().required(),
         description: Joi.string().required(),
         category: Joi.string().required(),
-        price: Joi.string().required(),
-        stock_quantity: Joi.string().required(),
+        price: Joi.number().required(),
+        stock_quantity: Joi.number().required(),
     })
 }), ProductController.update);
 

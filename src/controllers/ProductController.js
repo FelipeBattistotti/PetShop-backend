@@ -34,6 +34,33 @@ module.exports = {
         return response.json(product);
     },
 
+    async indexByID(request, response) {
+        const { id } = request.params;
+        const user_id = request.headers.authorization;
+
+        const product = await connection('product')
+                .where('product.user_id', user_id)
+                .andWhere('id', id)
+                .select('*')
+                .first();
+
+        if (product === undefined) {
+            console.log('GET product - NOK');
+            console.log('Product not found!');
+            return response.status(401).json({ error: 'Product not found!' });
+        }
+
+        if (product.user_id != user_id) {
+            console.log('GET product - NOK');
+            console.log('Operation not allowed!');
+            return response.status(401).json({ error: 'Operation not allowed!' });
+        }
+
+        console.log('GET product - OK');
+
+        return response.json(product);
+    },
+
     async create(request, response) {
         const { name, description, category, price, stock_quantity } = request.body;
         const user_id = request.headers.authorization;
