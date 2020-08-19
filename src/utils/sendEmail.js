@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-require('dotenv').config()
+require('dotenv').config();
 
 module.exports = async function sendEmail(email) {
 
