@@ -29,6 +29,9 @@ module.exports = {
 
         response.header('X-Total-Count', count['count(*)']);
 
+        // => sleep
+        await new Promise(resolve => setTimeout(resolve, 1500));
+
         console.log('GET product - OK');
 
         return response.json(product);
