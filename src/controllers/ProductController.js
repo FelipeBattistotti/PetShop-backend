@@ -30,7 +30,7 @@ module.exports = {
         response.header('X-Total-Count', count['count(*)']);
 
         // => sleep
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        await new Promise(resolve => setTimeout(resolve, 2000));
 
         console.log('GET product - OK');
 
